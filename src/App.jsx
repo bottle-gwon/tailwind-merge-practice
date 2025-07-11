@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
+
 function App() {
   const [count, setCount] = useState(0)
+  const BUTTON_STYLE = 'border border-gray py-0.5 px-2 bg-gray-500 text-white rounded-2xl my-[10px]'
 
   return (
-    <div className='flex flex-col items-center justify-around w-lvw h-lvh'>
+    <div className='flex flex-col items-center justify-around w-lvw h-lvh bg-gray-400'>
       <h1 className='text-4xl font-bold'>tailwind-merge 실습 과제</h1>
 
       <div>
@@ -21,25 +23,25 @@ function App() {
       </div>
       <div className="flex flex-col justify-around w-[300px]">
         <div className='flex justify-around items-center'>
-          <button onClick={() => setCount((prev) => prev + 1)}>
+          <button className={BUTTON_STYLE} onClick={() => setCount((prev) => prev + 1)}>
             plus 1 
           </button>
-          <button onClick={() => setCount((prev) => prev + 10)}>
+          <button className={BUTTON_STYLE}  onClick={() => setCount((prev) => prev + 10)}>
             plus 10
           </button>
-          <button onClick={() => setCount((prev) => prev + 100)}>
+          <button className={BUTTON_STYLE} onClick={() => setCount((prev) => prev + 100)}>
             plus 100
           </button>
         </div>
 
         <div className='flex justify-around items-center'>
-          <button onClick={() => setCount((prev) => prev - 1)}>
+          <button className={BUTTON_STYLE} onClick={() => setCount((prev) => prev - 1)}>
             minus 1
           </button>
-          <button onClick={() => setCount((prev) => prev - 10)}>
+          <button className={BUTTON_STYLE} onClick={() => setCount((prev) => prev - 10)}>
             minus 10
           </button>
-          <button onClick={() => setCount((prev) => prev - 100)}>
+          <button className={BUTTON_STYLE} onClick={() => setCount((prev) => prev - 100)}>
             minus 100
           </button>
         </div>
